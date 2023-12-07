@@ -1,0 +1,19 @@
+﻿@model AuthorCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" class="form-control">
+        <span asp-validation-for="Surname"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

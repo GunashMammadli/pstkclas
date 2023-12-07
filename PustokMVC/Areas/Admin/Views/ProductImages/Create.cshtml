@@ -1,0 +1,19 @@
+﻿@model ProductImageCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="ImageFile"></label>
+        <input asp-for="ImageFile" accept="image/*" class="form-control">
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductId"></label>
+        <input asp-for="ProductId" class="form-control">
+        <span asp-validation-for="ProductId"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
